@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="proofFabrica">
+	<head>
+		<!-- 
+		<base href="/">
+		 -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="description" content="">
+
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        	
+		<link href="css/icons.css" rel="stylesheet" />
+		<link href="css/components.css" rel="stylesheet" />
+		<link href="css/navBar.css" rel="stylesheet" />
+
+		
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="node_modules/toastr/toastr.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+	</head>
+  	<body>
+	    <div>
+		    <div ui-view="navBar"></div>
+	
+			<div ui-view="content"></div>
+
+			<div ui-view="footer"></div>
+	    </div>
+	    <!-- 
+	    <spring:message code="field1" text="default"/>
+	     -->
+
+
+	<!--Libs.ini  -->
+
+	<script src="js/config/urlRest.js"></script>     
+	<script src="js/utils/modals.js"></script>
+
+	<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<!-- jQuery validation -->
+	<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> 
+
+	<script src="bootstrap/js/bootstrap.js"></script>   
+	<script src="node_modules/moment/min/moment.min.js"></script>
+	<script src="node_modules/toastr/toastr.min.js"></script>
+	<!--
+
+	<script src="js/imports.js"></script>
+	-->
+   	
+	<script src="node_modules/angular/angular.js"></script> 
+
+	<script src="node_modules/angular-ui-router/angular-ui-router.js"></script>
+
+	<!--Libs.fin  -->
+
+	<!--App.ini  -->
+	<script src="js/config/app.js"></script>
+	<script src="js/directives/onlyNumber.js"></script>
+	<script src="js/directives/onlyText.js"></script>
+    <script src="modules/navBar/navBarController.js"></script>
+	<script src="modules/footer/footerController.js"></script>
+    <script src="modules/start/startController.js"></script>
+    <script src="modules/pedidos/pedidosController.js"></script>
+
+    <script src="modules/pedidos/pedidosFactory.js"></script>
+	<script src="modules/pedidos/pedidosForm.js"></script>
+
+    <script src="js/config/config.js"></script>
+	<script src="js/utils/messagesToastr.js"></script>
+
+	<!--App.fin  -->	
+	
+
+
+
+  </body>
+</html>

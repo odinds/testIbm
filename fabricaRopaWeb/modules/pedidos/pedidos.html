@@ -1,0 +1,51 @@
+<div class="row">
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-7">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+    		<h3 class="panel-title">Pedidos</h3>
+  		</div>
+			<div class="panel-body">
+				<form name="validationPedidosForm" ng-submit="ctrl.nuevoPedidoSubmit(validationPedidosForm)" ng-validate="validationOptions">
+					<div class="form-group">
+						<label for="nombreSol">Nombre Solicitante</label>
+						<input type="text" class="form-control" name="nombreSol" 
+							ng-model="ctrl.nuevoPedido.nombreSol" placeholder="Solicitante" only-text>
+					</div>
+					<div class="form-group">
+						<label for="tipoId">Tipo Identificación</label>
+						<select class="form-control" name="tipoId" ng-model="ctrl.nuevoPedido.tipoId">
+									<option ng-repeat="item in ctrl.tiposIdentificacion" value="{{item.id}}">{{item.name}}
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="numeroId">Número Identificación</label>
+						<input type="text" class="form-control" name="numeroId" placeholder="Número" only-number max-l="15" ng-model="ctrl.nuevoPedido.numeroIdPersona">
+					</div>			
+					<div class="form-group">
+						<label for="tipoRopa">Tipo Ropa</label>
+						<select class="form-control" name="tipoRopa" ng-model="ctrl.nuevoPedido.tipoRopa">
+									<option ng-repeat="item in ctrl.productos" value="{{item.id}}">{{item.nombre}}
+						</select>
+					</div>	
+					<div class="form-group">
+						<label for="cantidad">Cantidad</label>
+						<input type="text" class="form-control" name="cantidad" placeholder="Cantidad" only-number  ng-model="ctrl.nuevoPedido.cantidad">
+					</div>	
+					<div class="form-group">
+						<label for="direccion">Dirección</label>
+						<input type="text" class="form-control" name="direccion" placeholder="Dirección" ng-model="ctrl.nuevoPedido.direccion">
+					</div>	
+
+					<button type="submit" class="btn btn-default">Guardar</button>
+				</form>	
+			</div>
+		</div>
+	
+	</div>
+
+	<div class="col-md-12">
+  </div>
+</div>
